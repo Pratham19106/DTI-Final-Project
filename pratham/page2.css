@@ -4,9 +4,15 @@
     box-sizing: border-box;
   }
   
+  html {
+    scroll-behavior: smooth;
+  }
+  
   body {
+height: 100vh;
+    position: relative;
     font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #ffffff, #ffa589, #ffffff);
+    background: linear-gradient(135deg, #ffffff, #ffa589, #fcd5d5);
     background-size: 100% 100%; /* Fix for repeating gradient */
     color: #333;
     min-height: 100vh;
@@ -19,13 +25,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 75%;
+    font-size: 20px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   }
   
   .navbar-left {
     font-weight: bold;
-    flex: 1;
+    width: 45%;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -45,8 +51,11 @@
     color: #fff;
   }
   
+  
   .navbar-right {
     display: flex;
+    justify-content: space-evenly;
+    width: 55%;
     gap: 20px;
     align-items: center;
   }
@@ -63,174 +72,143 @@
   }
   
   .home-icon {
-    font-size: 24%;
+    font-size: 24px;
     cursor: pointer;
   }
-  
-  .container {
-    padding: 40px 20px;
-    max-width: 1100px;
-    margin: auto;
-  }
-  
-  .profile-card {
-    position: relative;
-    display: flex;
-    gap: 30px;
-    background: white;
-    border-radius: 16px;
-    padding: 30px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-    margin-bottom: 40px;
-    overflow: hidden;
-    z-index: 1;
-  }
-  
-  .profile-card span {
-    position: absolute;
-    inset: 0;
-    z-index: 2;
-    pointer-events: none;
-  }
-  
-  .profile-card::before,
-  .profile-card::after,
-  .profile-card span::before,
-  .profile-card span::after {
-    content: "";
-    position: absolute;
-    background: linear-gradient(to right, #ff5722, #ff9800);
-    height: 4px;
+  #cardContainer{
+    text-align:center ;
+    color:#fff ;
+    font-weight: bolder;
+    margin-top: 4rem;
     width: 100%;
-    z-index: 2;
-    transition: all 0.3s ease;
-    opacity: 0;
-  }
-  
-  .profile-card::before {
-    top: 0;
-    left: -100%;
-    animation: snakeTop 2s linear infinite;
-  }
-  
-  .profile-card::after {
-    bottom: 0;
-    right: -100%;
-    animation: snakeBottom 2s linear infinite;
-  }
-  
-  .profile-card span::before {
-    top: -100%;
-    left: 0;
-    width: 4px;
-    height: 100%;
-    animation: snakeLeft 2s linear infinite;
-  }
-  
-  .profile-card span::after {
-    bottom: -100%;
-    right: 0;
-    width: 4px;
-    height: 100%;
-    animation: snakeRight 2s linear infinite;
-  }
-  
-  .profile-card:hover::before,
-  .profile-card:hover::after,
-  .profile-card:hover span::before,
-  .profile-card:hover span::after {
-    opacity: 1;
-  }
-  
-  @keyframes snakeTop {
-    0% { left: -100%; }
-    100% { left: 100%; }
-  }
-  
-  @keyframes snakeBottom {
-    0% { right: -100%; }
-    100% { right: 100%; }
-  }
-  
-  @keyframes snakeLeft {
-    0% { top: -100%; }
-    100% { top: 100%; }
-  }
-  
-  @keyframes snakeRight {
-    0% { bottom: -100%; }
-    100% { bottom: 100%; }
-  }
-  
-  .avatar {
-    width: 150px;
-    height: 150px;
-    border-radius: 8px;
-    background: url('https://via.placeholder.com/150') no-repeat center/cover;
-    box-shadow: 0 0 20px #ff5722;
-  }
-  
-  .profile-info {
-    flex: 1;
-  }
-  
-  .profile-info h2 {
-    margin-bottom: 10px;
-  }
-  
-  .profile-info p {
-    margin: 6px 0;
-    font-size: 16px;
-  }
-  
-  .downloads-card {
-    background: #fff;
-    border-radius: 16px;
-    padding: 30px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
-  }
-  
-  .downloads-card h3 {
-    margin-bottom: 20px;
-    color: #ff5722;
-  }
-  
-  .download-item {
+    height: auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+  }
+.card{
+    background-color: #fff;
+border-radius: 22px;
+    min-height: 65vh;
+    width: 30%;
+}
+.cardHeader{
+  display:flex;
+  flex-direction: column;
+justify-content: center;
+  border-top-left-radius:inherit;
+  border-top-right-radius:inherit ;
+    background-color: #e64a19;
+    min-height: 7vh;
+}
+.card1 .cardContent{
+ 
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    height: 90%;
     align-items: center;
-    background: #f5f5f5;
-    padding: 15px 20px;
-    border-radius: 10px;
-    margin-bottom: 15px;
-  }
+justify-content: center;
+gap: 10%;
+}
+ul li{
+color: #333;
+}
+.card2 .cardContent{
   
-  .download-item:hover {
-    transform: translateY(-5px);
-    background-color: #343434;
-    color: white;
-    transition: transform 0.3s ease;
-  }
-  
-  .btn-download {
-    background: #ff5722;
-    border: none;
-    color: white;
-    padding: 8px 16px;
-    border-radius: 6px;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  
-  .btn-download:hover {
-    background-color: yellow;
-    color: rgb(0, 0, 0);
-    transform: translateY(-5px);
-    transition: transform 0.2s ease;
-  }
-  
-  /* Media Queries for responsiveness */
-  @media (max-width: 768px) {
+  display: flex;
+  height: 89%;
+  flex-direction: column;
+  justify-content: center;
+
+}
+.btn {
+  height: 30%;
+  width: 75%;
+  text-decoration: none;
+  padding:0px,5px;
+  font-size: 16px;
+  border: none;
+  border-radius: 25px;
+  background-color: white;
+  color: #d94b1e;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: #f2f2f2;
+}
+
+.logout {
+  background-color: #daa595;
+  color: white;
+}
+
+.logout:hover {
+  background-color: #a23312;
+}
+.subMenu{
+  display: none;
+  flex-direction: column;
+align-items: center; 
+background-color: #fff;
+  width:40%;
+  height: 35vh;
+  position: absolute;
+  right: 2%;
+  z-index: 100;
+  border-radius: 22px;
+}
+.subMenu img{
+  border: 2px dashed #f37650  ;
+  height: 60%;
+  width: 50%;
+  border-radius: 45%;
+}
+.upper{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+;
+  align-items: center;
+  height: 75%;
+}
+.lower{
+  position: relative;
+  display: flex;
+
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 25%;
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius:inherit ;
+  background-color: #d84315;
+}
+.footer{
+
+  position: relative;
+  height: 7vh;
+  margin-top: 4.5%;
+  background-color:#000000;
+  color: #eee;
+}
+
+@media (max-width: 768px) {
+    #cardContainer{
+        flex-direction: column;
+        gap: 5%;
+        align-items: center;
+        
+    }
+    .card{
+        margin-top: 10%;
+        width: 80%;
+        min-height: 45vh;
+    }
     .navbar {
       flex-direction: column;
       align-items: flex-start;
@@ -269,4 +247,23 @@
       background-color: #d84315;
     }
   }
+  .notice-marquee {
+    height: 50%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .notice-marquee ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .notice-marquee li {
+    padding: 10px 15px;
+    background: white;
+    border-bottom: 1px solid #eee;
+    font-weight: 500;
+  }
+  
   
