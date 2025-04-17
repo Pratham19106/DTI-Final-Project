@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  padding-bottom: 0px;
+  
   font-family: 'Segoe UI', sans-serif;
 }
 
@@ -520,7 +522,25 @@ i {
 }
 
 @media (max-width: 480px) {
+  html{
+    height: auto;
+  }
+ .navbar {
+font-size: 1.3rem;
+  }
+  .logo {
+   width: 65%;
+  }
+  .navbar-left {
+    display: flex;
+    justify-content: center;
+  }
+  body{
+    position: relative;
+  }
+  
   .footer {
+  
     font-size: 0.89rem;
   }
 
