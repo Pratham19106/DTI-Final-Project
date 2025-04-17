@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MSI Portal VJTI</title>
+
+  <link rel="stylesheet" href="landing.css">
+
+  <script src="https://kit.fontawesome.com/657d6f9f7c.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="navbar">
+    <div class="navbar-left">
+      <img style="filter: brightness(2);" src="https://vjti.ac.in/wp-content/uploads/2024/06/transparent-bg.png"
+        alt="vjti logo" class="logo" />
+      
+    </div>
+    <div class="navbar-right">
+      <a href="#"><i class="fas fa-home home-icon" title="Home"></i> Home </a>
+      <a href="#"><i class="fa-solid fa-user"></i> Profile</a>
+      <a href="#"> <i class="fa-solid fa-graduation-cap"></i> Academic </a>
+      
+     
+      <i class="fa-solid fa-caret-down drop"></i>
+    </div>
+  </div>
+  <div class="subMenu" >
+    <div class="upper">
+      <img src="https://vjti.ac.in/wp-content/uploads/2024/06/transparent-bg.png" alt="" >
+      <div class="name"> </div>
+    </div>
+    <div class="lower">
+      <a href="#" class="btn changePass">Change Password</a>
+      <a href="page1.html" class="btn logout">LOGOUT</a>
+    </div>
+
+
+  </div>
+  <div id="cardContainer">
+    <div class="card card1">
+      <div class="cardHeader">DATE & TIME</div>
+      <div class="cardContent">
+        <h2 id="dayName"></h2>
+        <h2 id="date"></h2>
+        <h2 id="time"></h2>
+      </div>
+    </div>
+
+    <div class="card card2">
+      <div class="cardHeader">NOTICE</div>
+      <div class="cardContent">
+        <div class="notice-marquee">
+          <ul id="noticeList">
+            <li>Seminar on AI: 18th April 2025</li>
+            <li>Mid-semester exams start from 25th April</li>
+            <li>Hackathon registrations open till 20th April</li>
+            <li>Library hours extended till 9 PM</li>
+            <li>Guest Lecture by Dr. Rao on 22nd April</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="card card3">
+      <div class="cardHeader">NEWS</div>
+      <div class="cardContent"></div>
+    </div>
+  </div>
+  <div class="footer"> Veermata Jijabai Technological Institute (VJTI)</div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+  <script src="landing.js">
+  </script>
+</body>
+
+</html>
