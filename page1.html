@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MIS Portal VJTI</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style1.css">
     <script src="https://kit.fontawesome.com/9a18a67edf.js" crossorigin="anonymous"></script>
 </head>
 
@@ -17,42 +17,68 @@
     <div class="navbar">
         <nav>
             <ul>
-                <ol>Home</ol>
-                <ol>Map</ol>
-                <ol>Announcements</ol>
-                <ol>Contact Us</ol>
-                <ol>Feedback</ol>
+                <li><a href="page1.html">Home</a></li>
+                <li><a href="vjtimap.html">Map</a></li>
+                <li><a href="#">Announcements</a></li>
+                <li><a href="#">Contact Us</a></li>
             </ul>
         </nav>
     </div>
     <div class="line2"></div>
-    <img style="position: absolute; z-index: -1; height: 100%; width: 100%; filter: opacity(40%); filter: brightness(40%); "
+    <img id="img1" style="position: absolute; height: 80%; width: 65%; filter: opacity(40%); filter: brightness(50%); "
         src="https://vjti.ac.in/wp-content/uploads/2024/06/vjti-maingate.png" alt="image">
     <div class="container">
+        <div class="text1">
+            <p>Your <br>
+                onestop destination for <br>
+                exam academics.
+            </p>
+        </div>
+        <div class="line3"></div>
         <div class="cont-ls">
-            <form>
-                <div class="but-ls">
-                    <button class="cb001" id="b001" style="font-size: 10px;">Sign Up</button>
-                    <button class="cb001" id="b002" style="font-size: 10.2px;">Forget Password <i
-                            class="fa-solid fa-question"></i> </button>
+            <div class="but-ls">
+                <button class="cb001" id="b001" style="font-size: 10px;">Sign Up</button>
+                <button class="cb001" id="b002" style="font-size: 10.2px;">Forget Password<i
+                        style="padding-left: 0.2rem;" class="fa-solid fa-question"></i> </button>
+            </div>
+
+            <form >
+                <div class="userinfo" style="display: flex; flex-direction: column;">
+                    <div class="space2" style="padding-bottom: 1rem;">
+                        <i id="user" class="fa-solid fa-user fa-lg"></i>
+                        <input id="name" class="info-user" type="text" placeholder="Name" required>
+                    </div>
+
+                    <br>
+                 
+                    <div class="space" style="padding-bottom: 1rem;">
+                        <i id="pass" class="fa-solid fa-lock fa-lg"></i>
+                        <input id="password" class="info-user" type="password" placeholder="Password" required>
+                    </div>
+
+                    <br>
+
+                    <div class="space1" style="padding-bottom: 1rem;">
+                        <i id="phone" class="fa-solid fa-phone fa-lg"></i>
+                        <input id="mobile" class="info-user" type="tel" placeholder="+91 XXXXXXXXXX" required>
+                    </div>
+
+                    <br>
+
+                    <div class="space3">
+                            <button class="cb001" id="b003" type="button" onclick="handleSubmit()"><b>Get OTP</b></button>
+                    </div>
                 </div>
             </form>
-            <div class="userinfo">
-                <form>
-                       <div class="space2" style="padding-bottom: 1rem;"><i id="user" class="fa-solid fa-user fa-lg"></i> <input class="info-user" type="text" placeholder="Name"></div> 
-                        <br>
-                       <div class="space" style="padding-bottom: 1rem;"><i id="pass" class="fa-solid fa-lock fa-lg"></i> <input class="info-user" type="password" placeholder="Password"></div> 
-                        <br>
-                        <i id="phone" class="fa-solid fa-phone fa-lg"></i> <input class="info-user" type="number" placeholder="Mobile Number">
-                        <br>
-
-                        <div class="space3" ><button class="cb001" id="b003" style="font-size: 10.2px; color: rgb(255, 255, 255);">Get OTP</button></div>
-                </form>
-            </div>
         </div>
     </div>
 
-
+    <footer>
+        <div class="cont-foot">
+            <p>&copy; <span id="year"></span> VJTI MIS Portal. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script1.js"></script>
 </body>
 
 </html>
