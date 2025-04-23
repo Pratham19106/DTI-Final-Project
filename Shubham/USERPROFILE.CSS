@@ -43,7 +43,7 @@
   
   .logo:hover {
     transform: scale(1.05);
-    filter: invert(1);
+    
     color: #fff;
   }
   
