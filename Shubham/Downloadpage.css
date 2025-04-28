@@ -158,6 +158,88 @@ i {
   color: #eee;
 }
 
+.dropdown {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.dropdown-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.academic-drop {
+  font-size: 1rem;
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.dropdown:hover .academic-drop {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  overflow: hidden;
+  position: absolute;
+  top: 120%;
+  left: 0;
+  font-size: 1.2rem;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  width: 250px;
+  height: 0;
+  z-index: 1000;
+  border-radius: 22px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.menu-upper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 1rem;
+}
+
+.menu-lower {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #d84315;
+  padding: 1rem;
+}
+
+.dropdown-menu a {
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  color: inherit;
+}
+
+.menu-upper a {
+  color: #333;
+}
+
+.menu-lower a {
+  color: white;
+}
+
+.menu-upper a:hover {
+  background-color: rgba(230, 74, 25, 0.1);
+  transform: translateX(10px);
+}
+
+.menu-lower a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateX(10px);
+}
 .container {
   padding: 40px 20px;
   max-width: 1100px;

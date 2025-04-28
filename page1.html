@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>MIS Portal VJTI</title>
     <link rel="stylesheet" href="style1.css">
     <script src="https://kit.fontawesome.com/9a18a67edf.js" crossorigin="anonymous"></script>
@@ -25,7 +25,7 @@
         </nav>
     </div>
     <div class="line2"></div>
-    <img id="img1" style="position: absolute; height: 80%; width: 65%; filter: opacity(40%); filter: brightness(50%); "
+    <img id="img1" style="position: absolute; filter: opacity(40%); filter: brightness(50%); z-index: 1; "
         src="https://vjti.ac.in/wp-content/uploads/2024/06/vjti-maingate.png" alt="image">
     <div class="container">
         <div class="text1">
@@ -36,40 +36,37 @@
         </div>
         <div class="line3"></div>
         <div class="cont-ls">
-            <div class="but-ls">
-                <button class="cb001" id="b001" style="font-size: 10px;">Sign Up</button>
-                <button class="cb001" id="b002" style="font-size: 10.2px;">Forget Password<i
-                        style="padding-left: 0.2rem;" class="fa-solid fa-question"></i> </button>
-            </div>
-
-            <form >
-                <div class="userinfo" style="display: flex; flex-direction: column;">
-                    <div class="space2" style="padding-bottom: 1rem;">
+            <form class="userinfo">
+                <div class="input-group" style="margin-left: 10%;">
+                    <div class="space2">
                         <i id="user" class="fa-solid fa-user fa-lg"></i>
                         <input id="name" class="info-user" type="text" placeholder="Name" required>
                     </div>
 
-                    <br>
-                 
-                    <div class="space" style="padding-bottom: 1rem;">
+                    <div class="space">
                         <i id="pass" class="fa-solid fa-lock fa-lg"></i>
                         <input id="password" class="info-user" type="password" placeholder="Password" required>
                     </div>
 
-                    <br>
-
-                    <div class="space1" style="padding-bottom: 1rem;">
+                    <div class="space1">
                         <i id="phone" class="fa-solid fa-phone fa-lg"></i>
                         <input id="mobile" class="info-user" type="tel" placeholder="+91 XXXXXXXXXX" required>
                     </div>
 
-                    <br>
-
                     <div class="space3">
-                            <button class="cb001" id="b003" type="button" onclick="handleSubmit()"><b>Get OTP</b></button>
+                        <button class="cb001" id="b003" type="button" onclick="handleSubmit()">
+                            <b>Get OTP</b>
+                        </button>
                     </div>
                 </div>
             </form>
+
+            <div class="but-ls">
+                <button class="cb001" id="b001">Sign Up</button>
+                <button class="cb001" id="b002">
+                    Forget Password<i class="fa-solid fa-question"></i>
+                </button>
+            </div>
         </div>
     </div>
 

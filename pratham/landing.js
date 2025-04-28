@@ -1,4 +1,3 @@
-
 function updateDateTime() {
     const now = new Date();
     const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
@@ -58,36 +57,64 @@ function updateDateTime() {
   const drop = document.querySelector(".drop");
   const subMenu = document.querySelector(".subMenu");
 
-  let display = () => {
+  const showSubmenu = () => {
     subMenu.style.display = "flex";
+    gsap.to(subMenu, {
+        height: "35vh",
+        duration: 0.1   ,
+        ease: "power2.inOut"
+    });
   };
 
-  let hide = () => {
-  
-    if (!drop.matches(':hover') && !subMenu.matches(':hover')) {
-      subMenu.style.display = "none";
-    }
+  const hideSubmenu = () => {
+    gsap.to(subMenu, {
+        height: 0,
+        duration: 0.1,
+        ease: "power2.inOut",
+        onComplete: () => {
+            subMenu.style.display = "none";
+        }
+    });
   };
 
-  const hover = gsap.to(drop, {
-    yPercent: -20,
-    opacity: 0,
-    paused: true,
-    duration: 0.7,
-    onStart: display,
-    onReverseComplete: hide
-  });
+  drop.addEventListener("mouseenter", showSubmenu);
 
-  drop.addEventListener("mouseenter", () => hover.play());
-  drop.addEventListener("mouseleave", () => {
+  drop.addEventListener("mouseleave", (e) => {
     setTimeout(() => {
-      if (!subMenu.matches(':hover')) {
-        hover.reverse();
-      }
-    }, 100); 
+        if (!subMenu.matches(":hover")) {
+            hideSubmenu();
+        }
+    }, 100);
   });
 
-  subMenu.addEventListener("mouseleave", () => {
-    hover.reverse();
+  subMenu.addEventListener("mouseleave", (e) => {
+    if (!drop.matches(":hover")) {
+        hideSubmenu();
+    }
   });
 
+    // Dropdown functionality
+  const dropdown = document.querySelector(".dropdown");
+  const dropdownMenu = document.querySelector(".dropdown-menu");
+  
+  dropdown.addEventListener("mouseenter", () => {
+      dropdownMenu.style.display = "flex";
+      gsap.to(dropdownMenu, {
+          opacity: 1,
+          height: "auto",
+          duration: 0.3,
+          ease: "power2.inOut",
+      });
+  });
+  
+  dropdown.addEventListener("mouseleave", () => {
+      gsap.to(dropdownMenu, {
+          opacity: 0,
+          height: 0,
+          duration: 0.3,
+          ease: "power2.inOut",
+          onComplete: () => {
+              dropdownMenu.style.display = "none";
+          },
+      });
+  });

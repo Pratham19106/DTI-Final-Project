@@ -1,114 +1,125 @@
+/* Base styles */
+:root {
+    --primary-color: #e64a19;
+    --white: #ffffff;
+    --container-width: min(95%, 1400px);
+}
+
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    height: fit-content;
+    
+    min-height: 100vh;
     width: 100%;
+    font-size: 16px;
 }
 
 header {
-    position: relative;
     width: 100%;
-    padding-top: 2.5rem;
-    padding-bottom: 1.8rem;
+    padding: clamp(1.5rem, 3vw, 2.5rem) 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-color: #ae152d; */
-    background-color: #e64a19;
+    background-color: var(--primary-color);
+}
+
+.image {
+    height: clamp(60px, 10vw, 120px);
+    width: auto;
+    max-width: 90%;
 }
 
 .navbar {
-    position: absolute;
+    position: relative;
     width: 100%;
-    height: 5.5%;
-    background-color: #ffffff;
-    /* background-color: #e3e3e3; */
-    /*e6e6e6 */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+    padding: 1rem 0;
+    background-color: var(--white);
 }
 
 .navbar ul {
     list-style: none;
-    text-decoration: none;
     display: flex;
-    gap: 10rem;
-    
+    justify-content: center;
+    gap: clamp(1rem, 5vw, 10rem);
+    flex-wrap: wrap;
+    padding: 0 1rem;
 }
 
 .navbar a {
     text-decoration: none;
-    color: black;
+    color: var(--black);
+    font-size: 22px;
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
 
-.line {
-    position: relative;
-    width: 100%;
-    height: 2px;
-    /* background-color: rgb(182, 255, 255); */
-    background-color: #e64a19;
-}
-
-
-
-.line2 {
-    position: relative;
-    width: 100%;
-    height: 2px;
-    margin-top: 3.2rem;
-    background-color: #e64a19;
-    /* background-color: rgb(182, 255, 255); */
-}
 
 .container {
-    height: 100vh;
+    min-height: 80vh;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(160deg,white, #ffa589, #ffffff);
+    background: linear-gradient(160deg, white, #ffa589, #ffffff);
+    position: relative;
+    padding: 2rem;
 }
 
 .cont-ls {
-    height: 21rem;
-    width: 30rem;
-    position: absolute;
-    background-color: #e64a19;
-    margin-left: 65%;
+    width: min(90%, 30rem);
+    aspect-ratio: 3/2;
+    background-color: var(--primary-color);
     border-radius: 1.5rem;
-    display: flex;
-    justify-content: center;
-    padding-top: 0.5rem;
+    position: relative;
     z-index: 1;
-    margin-top: -10rem;
-}
-
-.but-ls {
-    position: absolute;
+    margin-left: clamp(0%, 70%, 100%);
+    margin-top: clamp(-5rem, -5vw, -10rem);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 19rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    gap: 15rem;
-    font-size: 10px;
 }
 
 .userinfo {
-    height: 18rem;
-    width: 29rem;
+    width: 95%;
+    height: 85%;
     border-radius: 1.5rem;
-    background-color: azure;
-    background: linear-gradient(160deg,white, #fff5f2, #ffffff);
+    background: linear-gradient(160deg, white, #fff5f2, #ffffff);
+    padding: 1rem;
+    padding-bottom: 1rem;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    place-content: center;
+    
+}
+
+.info-user {
+    width: clamp(200px, 80%, 20rem);
+    height: 2rem;
+    padding-left: 2rem;
+    border: 1px solid var(--primary-color);
+}
+
+.text1 {
+    position: absolute;
+    left: clamp(1rem, 10%, 10%);
+    color: var(--white);
+    font-size: clamp(2rem, 5vw, 6rem);
+    line-height: 1.2;
+    z-index: 1;
+    margin-bottom: -14%;
+    margin-left: -8%;
+}
+/*  */
+.but-ls {
+    position: relative;
+    display: flex;
+    gap: 13rem;
+    padding-top: 1.4%;
 }
 
 #b001 {
@@ -116,6 +127,7 @@ header {
     width: 3.5rem;
     border-radius: 2px;
     border: transparent;
+    font-size: 12px;
 }
 
 #b002 {
@@ -123,46 +135,8 @@ header {
     width: 6.5rem;
     border-radius: 2px;
     border: transparent;
+    font-size: 12px;
 }
-
-
-.cb001 {
-    background-color: #ffffff;
-    color: #000000;
-    opacity: 80%;
-}
-
-.cb001:hover {
-    cursor: pointer;
-    color: #e64a19;
-}
-
-.info-user {
-    position: relative;
-    height: 2rem;
-    width: 20rem;
-    padding-left: 2rem;
-    border: 1px solid;
-    border-color: #e64a19;
-    z-index: 1;
-}
-
-.info-user :hover {
-    cursor: text;
-}
-
-#user,#pass,#phone {
-    position: absolute;
-    padding-top: 1rem;
-    padding-left: 0.4rem;
-    margin-left: 0%;
-    margin-top: 0;
-    z-index: 999;  
-}
-
-.space1, .space2, .space3{
-    position:relative;
-} 
 
 #b003 {
     position: relative;
@@ -173,120 +147,161 @@ header {
     margin-top:-50%;
     width: 60px;
     border-radius: 2px;
+    margin-left: 30%;
+    place-content: center;
     font-size: 12px;
 }
-
-.space3 {
-    display: flex;
-    justify-content: center;
-    padding-top: 1rem;
-}
-
-.space3 a {
-    text-decoration: none;
-    color: #ffffff;
-}
-
-.text1 {
-    z-index: 1;
-    position: relative;
-    color: #ffffff;;
-    font-size: 6rem;
-    margin-left: -40%;
-    margin-top: 3%;
-    opacity: 85%;
-    font-family: sans-serif;
-}
-
-.line3 {
-    position: absolute;
-    height: 80%;
-    width: 2px;
-    background-color: #ffffff;
-    margin-left: 30%;
-    margin-top: -11.05%;
-    z-index: 1;
-    
-}
-
-/* Ye Footer he bhai */
-
-.cont-foot {
-    height: 12rem;
-    width: 100%;
-    background-color: #e64a19;
-    margin-top: -11.05%;
+.cont-foot{
+    background-color: #000000;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 22px;
     color: #ffffff;
+    position: relative;
+    height: 5vh;
+    width: 100%;
+    z-index: 2;
 }
 
-/* Responsive adjustments for Desktop & Laptop sizes */
-@media (min-width: 1024px) {
-    .navbar ul {
-      gap: 1rem;
+.cb001:hover {
+    cursor: pointer;
+    color: #e64a19;
+}
+/*  */
+
+.info-user :hover {
+    cursor: text;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 5%;
+}
+
+#user,#pass,#phone {
+    position: absolute;
+    margin-top: 3.2%;
+    margin-left: 1.8%;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        
     }
-    .text1 {
-      font-size: 5rem;
-    }
+
     .cont-ls {
-      max-width: 450px;
+        margin-left: 0;
+        margin-top: 2rem;
     }
-  }
-  
-  @media (max-width: 1024px) {
-    .navbar ul {
-      gap: 2rem;
-    }
+
     .text1 {
-      font-size: 5rem;
-    }
-    .cont-ls {
         position: relative;
-      max-width: 450px;
+        text-align: center;
+        left: 0;
+        margin-bottom: 2rem;
     }
-  }
 
-  @media (min-width: 1440px) {
+    .line3 {
+        display: none;
+    }
+
+    .but-ls {
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    #img1 {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 480px) {
+    /* .container {
+       height: 100vh;
+        
+       width: 100%;
+    } */
+     .container{
+        display: flex;
+    min-height:72vh;
+     }
+     header .imgage{
+        width: 50%;
+        height: 10vh;
+     }
+    #img1 {
+        object-fit: fill ;
+        width: 100vw;
+        height:76vh;
+    }
+    .navbar a{
+        font-size: 15px;
+    }
     .navbar ul {
-      gap: 4rem;
-    }
-    .text1 {
-      font-size: 6rem;
-    }
-    .cont-ls {
-      max-width: 500px;
-    }
-  }
-
-  @media screen and (max-width: 480px) {
-    .text1 {
-        font-size: 1.5rem;
-    }
-
-    #img {
-        height: 8rem;
-        width: max-content;
+        gap: 0.5rem;
     }
 
     .info-user {
         width: 100%;
-    }
-    
-    .but-ls {
-        gap: 0.5rem;
+        margin-left: -5%;
     }
 
-    #b001, #b002, #b003 {
+    .but-ls button {
         width: 100%;
+        max-width: 120px;
+    }
+
+    .userinfo {
+        margin-top: 2%;
+    }
+
+    #user,#pass,#phone {
+        margin-top: 4.5%;
+        margin-left: -2%;
+    }
+
+    .text1 {
+        display: none;
+        /* position: relative;
+        margin-top: -80%; */
+    }
+
+    .cont-foot {
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        font-size: 12px;
+        color: #ffffff;
+        position: relative;
+        height:5vh;
+        width: 100%;
+        z-index: 2;
     }
 
     .navbar ul {
-        list-style: none;
-        text-decoration: none;
-        display: flex;
-        gap: 1rem;
+        gap: 2rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    #img1 {
+        height: 80%; 
+        width: 65%;
+    }
+    
+    .cont-ls {
         
+        max-width: 500px;
+    }
+
+    .text1 {
+        font-size: 6rem;
     }
 }

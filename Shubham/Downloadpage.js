@@ -60,3 +60,27 @@ drop.addEventListener("mouseleave", () => {
 subMenu.addEventListener("mouseleave", () => {
   hover.reverse();
 });
+const dropdown = document.querySelector(".dropdown");
+const dropdownMenu = document.querySelector(".dropdown-menu");
+
+dropdown.addEventListener("mouseenter", () => {
+    dropdownMenu.style.display = "flex";
+    gsap.to(dropdownMenu, {
+        opacity: 1,
+        height: "auto",
+        duration: 0.3,
+        ease: "power2.inOut",
+    });
+});
+
+dropdown.addEventListener("mouseleave", () => {
+    gsap.to(dropdownMenu, {
+        opacity: 0,
+        height: 0,
+        duration: 0.3,
+        ease: "power2.inOut",
+        onComplete: () => {
+            dropdownMenu.style.display = "none";
+        },
+    });
+});
