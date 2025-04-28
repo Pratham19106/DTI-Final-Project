@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="Dashboard.css">
+    <script src="https://kit.fontawesome.com/657d6f9f7c.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="navbar-left">
+            <img src="https://vjti.ac.in/wp-content/uploads/2024/06/transparent-bg.png" alt="VJTI Logo" class="logo">
+        </div>
+        <div class="navbar-right">
+            <a href="#"><i class="fas fa-home"></i> Home</a>
+            <a href="#"><i class="fas fa-user"></i> Profile</a>
+            <a href="#"><i class="fas fa-graduation-cap"></i> Academic</a>
+            <i class="fa-solid fa-caret-down drop"></i>
+        </div>
+    </div>
+
+    <!-- Submenu -->
+    <div class="subMenu">
+        <div class="upper">
+            <img src="https://vjti.ac.in/wp-content/uploads/2024/06/transparent-bg.png" alt="">
+            <div class="name"></div>
+        </div>
+        <div class="lower">
+            <a href="#" class="btn changePass">Change Password</a>
+            <a href="page1.html" class="btn logout">LOGOUT</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content">
+        <!-- Profile Card -->
+        <div class="profile-card">
+            <span></span>
+            <div class="avatar" style="background-image: url('profile.jpg');"></div>
+            <div class="profile-info">
+                <h2>MULEY PRATHAM RAVINDRA</h2>
+                <p><strong>Registration No.:</strong> 241080042</p>
+                <p><strong>Father's Name:</strong> RAVINDRA</p>
+                <p><strong>Mother's Name:</strong> VAISHALI</p>
+                <p><strong>Degree / Branch:</strong> Bachelor of Technology / Information Technology</p>
+                <p><strong>Admission Batch:</strong> 2024–2025</p>
+                <p><strong>Semester:</strong> II</p>
+                <p><strong>Scheme:</strong> Information Technology 2023–2024</p>
+            </div>
+        </div>
+
+  <!-- Add after the profile card and before the footer -->
+<div class="dashboard-content">
+    <!-- Stats Grid -->
+    <div class="stats-grid">
+        <div class="stat-card">
+            <h3>Total Attendance</h3>
+            <p class="stat-value">85%</p>
+            <div class="trend positive">
+                <i class="fas fa-arrow-up"></i> 2%
+            </div>
+        </div>
+        <div class="stat-card">
+            <h3>Current GPA</h3>
+            <p class="stat-value">8.9</p>
+            <div class="trend positive">
+                <i class="fas fa-arrow-up"></i> 0.2
+            </div>
+        </div>
+        <div class="stat-card">
+            <h3>Subjects</h3>
+            <p class="stat-value">6</p>
+        </div>
+        <div class="stat-card">
+            <h3>Alerts</h3>
+            <p class="stat-value alert">2</p>
+        </div>
+    </div>
+
+    <!-- Charts Grid -->
+    <div class="charts-grid">
+        <div class="chart-card">
+            <div class="chart-header">
+                <h3>Attendance Overview</h3>
+                <div class="chart-controls">
+                    <button class="control-btn" onclick="toggleChartSize('attendanceChart')">
+                        <i class="fas fa-expand"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="chart-body">
+                <canvas id="attendanceChart"></canvas>
+            </div>
+        </div>
+        <div class="chart-card">
+            <div class="chart-header">
+                <h3>Subject-wise Marks</h3>
+                <div class="chart-controls">
+                    <button class="control-btn" onclick="toggleChartSize('marksChart')">
+                        <i class="fas fa-expand"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="chart-body">
+                <canvas id="marksChart"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- Footer -->
+    <div class="footer">
+        © VJTI MIS Portal. All rights reserved.
+        © Veermata Jijabai Technological Institute (VJTI) 2025
+    </div>
+
+    <!-- Scripts -->
+    <script src="Dashboard.js"></script>
+</body>
+</html>
