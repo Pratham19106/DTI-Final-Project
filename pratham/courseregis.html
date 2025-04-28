@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration - Personal Details</title>
+    <link rel="stylesheet" href="courseregis.css">
+    <script src="https://kit.fontawesome.com/657d6f9f7c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-left">
+            <img src="https://vjti.ac.in/wp-content/uploads/2024/06/transparent-bg.png" alt="VJTI Logo" class="logo">
+        </div>
+        <div class="navbar-right">
+            <a href="#"><i class="fas fa-home"></i> Home</a>
+            <a href="#"><i class="fas fa-user"></i> Profile</a>
+            <a href="#"><i class="fas fa-graduation-cap"></i> Academic</a>
+            <i class="fa-solid fa-caret-down drop"></i>
+        </div>
+    </div>
+    <div class="subMenu">
+        <div class="upper">
+            <img src="https://vjti.ac.in/wp-content/uploads/2024/06/transparent-bg.png" alt="">
+            <div class="name"> </div>
+        </div>
+        <div class="lower">
+            <a href="#" class="btn changePass">Change Password</a>
+            <a href="page1.html" class="btn logout">LOGOUT</a>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="personal card">
+            <div class="cardHeader">
+                <h1>Personal Details</h1>
+                <i class="fa-solid fa-plus"></i>
+            </div>
+            <div class="cardbody">
+                <form class="details-grid">
+                    <!-- Student Full Name -->
+                    <div class="detail-item">
+                        <label for="fullName" class="key">Student Full Name <span class="required">*</span></label>
+                        <input type="text" id="fullName" name="fullName" class="value" placeholder="Enter full name" required>
+                    </div>
+
+                    <!-- Registration Number -->
+                    <div class="detail-item">
+                        <label for="registrationNo" class="key">Registration No.</label>
+                        <input type="text" id="registrationNo" name="registrationNo" class="value" placeholder="Enter registration number">
+                    </div>
+
+                    <!-- Father's Name -->
+                    <div class="detail-item">
+                        <label for="fatherName" class="key">Father's Name <span class="required">*</span></label>
+                        <input type="text" id="fatherName" name="fatherName" class="value" placeholder="Enter father's name" required>
+                    </div>
+
+                    <!-- Mother's Name -->
+                    <div class="detail-item">
+                        <label for="motherName" class="key">Mother's Name <span class="required">*</span></label>
+                        <input type="text" id="motherName" name="motherName" class="value" placeholder="Enter mother's name" required>
+                    </div>
+
+                    <!-- Date of Birth -->
+                    <div class="detail-item">
+                        <label for="dob" class="key">Date of Birth <span class="required">*</span></label>
+                        <input type="date" id="dob" name="dob" class="value" required>
+                    </div>
+
+                    <!-- Gender -->
+                    <div class="detail-item">
+                        <label class="key">Gender <span class="required">*</span></label>
+                        <div class="value">
+                            <input type="radio" id="male" name="gender" value="Male" required>
+                            <label for="male">Male</label>
+                            <input type="radio" id="female" name="gender" value="Female">
+                            <label for="female">Female</label>
+                            <input type="radio" id="other" name="gender" value="Other">
+                            <label for="other">Other</label>
+                        </div>
+                    </div>
+
+                    <!-- Caste -->
+                    <div class="detail-item">
+                        <label for="caste" class="key">Caste</label>
+                        <input type="text" id="caste" name="caste" class="value" placeholder="Enter caste">
+                    </div>
+
+                    <!-- Category -->
+                    <div class="detail-item">
+                        <label for="category" class="key">Category</label>
+                        <select id="category" name="category" class="value">
+                            <option value="OPEN">OPEN</option>
+                            <option value="OBC">OBC</option>
+                            <option value="SC">SC</option>
+                            <option value="ST">ST</option>
+                        </select>
+                    </div>
+
+                    <!-- Mobile Number -->
+                    <div class="detail-item">
+                        <label for="mobile" class="key">Mobile No. <span class="required">*</span></label>
+                        <input type="tel" id="mobile" name="mobile" class="value" placeholder="Enter mobile number" required>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="detail-item">
+                        <label for="email" class="key">Student Email ID <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" class="value" placeholder="Enter email" required>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Address Details Section -->
+        <div class="address card">
+            <div class="cardHeader">
+                <h1>Permanent Address / Local Address / Guardian's Address</h1>
+                <i class="fa-solid fa-plus"></i>
+            </div>
+            <div class="cardbody">
+                <form class="details-grid">
+                    <!-- Local Address -->
+                    <div class="detail-item">
+                        <label for="localAddress" class="key">Local Address <span class="required">*</span></label>
+                        <textarea id="localAddress" name="localAddress" class="value" placeholder="Enter local address" required></textarea>
+                    </div>
+                    <div class="detail-item">
+                        <label for="localCity" class="key">City/Village <span class="required">*</span></label>
+                        <input type="text" id="localCity" name="localCity" class="value" placeholder="Enter city/village" required>
+                    </div>
+                    <div class="detail-item">
+                        <label for="localState" class="key">State <span class="required">*</span></label>
+                        <input type="text" id="localState" name="localState" class="value" placeholder="Enter state" required>
+                    </div>
+                    <div class="detail-item">
+                        <label for="localPincode" class="key">Pincode <span class="required">*</span></label>
+                        <input type="text" id="localPincode" name="localPincode" class="value" placeholder="Enter pincode" required>
+                    </div>
+
+                    <!-- Permanent Address -->
+                    <div class="detail-item">
+                        <label for="permanentAddress" class="key">Permanent Address <span class="required">*</span></label>
+                        <textarea id="permanentAddress" name="permanentAddress" class="value" placeholder="Enter permanent address" required></textarea>
+                    </div>
+                    <div class="detail-item">
+                        <label for="permanentCity" class="key">City/Village <span class="required">*</span></label>
+                        <input type="text" id="permanentCity" name="permanentCity" class="value" placeholder="Enter city/village" required>
+                    </div>
+                    <div class="detail-item">
+                        <label for="permanentState" class="key">State <span class="required">*</span></label>
+                        <input type="text" id="permanentState" name="permanentState" class="value" placeholder="Enter state" required>
+                    </div>
+                    <div class="detail-item">
+                        <label for="permanentPincode" class="key">Pincode <span class="required">*</span></label>
+                        <input type="text" id="permanentPincode" name="permanentPincode" class="value" placeholder="Enter pincode" required>
+                    </div>
+
+                    <!-- Guardian's Address -->
+                    <div class="detail-item">
+                        <label for="guardianAddress" class="key">Guardian's Address</label>
+                        <textarea id="guardianAddress" name="guardianAddress" class="value" placeholder="Enter guardian's address"></textarea>
+                    </div>
+                    <div class="detail-item">
+                        <label for="guardianCity" class="key">City/Village</label>
+                        <input type="text" id="guardianCity" name="guardianCity" class="value" placeholder="Enter city/village">
+                    </div>
+                    <div class="detail-item">
+                        <label for="guardianState" class="key">State</label>
+                        <input type="text" id="guardianState" name="guardianState" class="value" placeholder="Enter state">
+                    </div>
+                    <div class="detail-item">
+                        <label for="guardianPincode" class="key">Pincode</label>
+                        <input type="text" id="guardianPincode" name="guardianPincode" class="value" placeholder="Enter pincode">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Father, Mother, and Guardian Details Section -->
+        <div class="family-details card">
+            <div class="cardHeader">
+            <h1>Father, Mother, and Guardian Details</h1>
+            <i class="fa-solid fa-plus"></i>
+            </div>
+            <div class="cardbody">
+                <form class="details-grid">
+                    <!-- Father Details -->
+                    <div class="detail-item">
+                        <label for="fatherMobile" class="key">Father's Mobile No. <span class="required">*</span></label>
+                        <input type="tel" id="fatherMobile" name="fatherMobile" class="value" placeholder="Enter father's mobile number" required>
+                    </div>
+                    <div class="detail-item">
+                        <label for="fatherOccupation" class="key">Occupation</label>
+                        <input type="text" id="fatherOccupation" name="fatherOccupation" class="value" placeholder="Enter father's occupation">
+                    </div>
+                    <div class="detail-item">
+                        <label for="fatherIncome" class="key">Annual Income (in Rs)</label>
+                        <input type="number" id="fatherIncome" name="fatherIncome" class="value" placeholder="Enter annual income">
+                    </div>
+                    <div class="detail-item">
+                        <label for="fatherEmail" class="key">Father's Email ID</label>
+                        <input type="email" id="fatherEmail" name="fatherEmail" class="value" placeholder="Enter father's email">
+                    </div>
+
+                    <!-- Mother Details -->
+                    <div class="detail-item">
+                        <label for="motherMobile" class="key">Mother's Mobile No. <span class="required">*</span></label>
+                        <input type="tel" id="motherMobile" name="motherMobile" class="value" placeholder="Enter mother's mobile number" required>
+                    </div>
+                    <div class="detail-item">
+                        <label for="motherOccupation" class="key">Occupation</label>
+                        <input type="text" id="motherOccupation" name="motherOccupation" class="value" placeholder="Enter mother's occupation">
+                    </div>
+                    <div class="detail-item">
+                        <label for="motherIncome" class="key">Annual Income (in Rs)</label>
+                        <input type="number" id="motherIncome" name="motherIncome" class="value" placeholder="Enter annual income">
+                    </div>
+                    <div class="detail-item">
+                        <label for="motherEmail" class="key">Mother's Email ID</label>
+                        <input type="email" id="motherEmail" name="motherEmail" class="value" placeholder="Enter mother's email">
+                    </div>
+
+                    <!-- Guardian Details -->
+                    <div class="detail-item">
+                        <label for="guardianName" class="key">Guardian Name</label>
+                        <input type="text" id="guardianName" name="guardianName" class="value" placeholder="Enter guardian's name">
+                    </div>
+                    <div class="detail-item">
+                        <label for="guardianMobile" class="key">Guardian Mobile</label>
+                        <input type="tel" id="guardianMobile" name="guardianMobile" class="value" placeholder="Enter guardian's mobile number">
+                    </div>
+                    <div class="detail-item">
+                        <label for="guardianOccupation" class="key">Occupation</label>
+                        <input type="text" id="guardianOccupation" name="guardianOccupation" class="value" placeholder="Enter guardian's occupation">
+                    </div>
+                    <div class="detail-item">
+                        <label for="guardianEmail" class="key">Guardian's Email ID</label>
+                        <input type="email" id="guardianEmail" name="guardianEmail" class="value" placeholder="Enter guardian's email">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Admission Details Section -->
+        <div class="admission card">
+            <div class="cardHeader">
+                <h1>Admission Details</h1>
+                <i class="fa-solid fa-plus"></i>
+            </div>
+            <div class="cardbody">
+                <form class="details-grid">
+                    <div class="detail-item">
+                        <label for="admissionDate" class="key">Admission Date</label>
+                        <input type="date" id="admissionDate" name="admissionDate" class="value">
+                    </div>
+                    <div class="detail-item">
+                        <label for="paymentType" class="key">Payment Type</label>
+                        <select id="paymentType" name="paymentType" class="value">
+                            <option value="">Select</option>
+                            <option value="Online">Online</option>
+                            <option value="Offline">Offline</option>
+                        </select>
+                    </div>
+                    <div class="detail-item">
+                        <label for="branch" class="key">Branch</label>
+                        <select id="branch" name="branch" class="value">
+                            <option value="">Select</option>
+                            <option value="Information Technology">Information Technology</option>
+                            <option value="Computer Engineering">Computer Engineering</option>
+                            <option value="Mechanical Engineering">Mechanical Engineering</option>
+                        </select>
+                    </div>
+                    <div class="detail-item">
+                        <label for="year" class="key">Year</label>
+                        <select id="year" name="year" class="value">
+                            <option value="">Select</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </div>
+                    <div class="detail-item">
+                        <label for="stateEligibility" class="key">State of Eligibility</label>
+                        <select id="stateEligibility" name="stateEligibility" class="value">
+                            <option value="">Select</option>
+                            <option value="Maharashtra">Maharashtra</option>
+                            <option value="Gujarat">Gujarat</option>
+                            <option value="Karnataka">Karnataka</option>
+                        </select>
+                    </div>
+                    <div class="detail-item">
+                        <label class="key">Hosteler</label>
+                        <div class="value">
+                            <input type="radio" id="hostelerYes" name="hosteler" value="Yes">
+                            <label for="hostelerYes">Yes</label>
+                            <input type="radio" id="hostelerNo" name="hosteler" value="No">
+                            <label for="hostelerNo">No</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Entrance Exam Scores Section -->
+        <div class="entrance-exam card">
+            <div class="cardHeader">
+                <h1>Entrance Exam Scores</h1>
+                <i class="fa-solid fa-plus"></i>
+            </div>
+            <div class="cardbody">
+                <form class="details-grid">
+                    <div class="detail-item">
+                        <label for="examName" class="key">Exam Name</label>
+                        <select id="examName" name="examName" class="value">
+                            <option value="">Select</option>
+                            <option value="JEE">JEE</option>
+                            <option value="CET">CET</option>
+                            <option value="NEET">NEET</option>
+                        </select>
+                    </div>
+                    <div class="detail-item">
+                        <label for="entranceScore" class="key">Total Final Score</label>
+                        <input type="number" id="entranceScore" name="entranceScore" class="value" placeholder="Enter total score">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- HSC Exam Scores Section -->
+        <div class="hsc-scores card">
+            <div class="cardHeader">
+                <h1>HSC Exam Scores</h1>
+                <i class="fa-solid fa-plus"></i>
+            </div>
+            <div class="cardbody">
+                <form class="details-grid">
+                    <div class="detail-item">
+                        <label for="hscSchool" class="key">School/College Name</label>
+                        <input type="text" id="hscSchool" name="hscSchool" class="value" placeholder="Enter school/college name">
+                    </div>
+                    <div class="detail-item">
+                        <label for="hscScore" class="key">Total Final Score</label>
+                        <input type="number" id="hscScore" name="hscScore" class="value" placeholder="Enter total score">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- SSC Exam Scores Section -->
+        <div class="ssc-scores card">
+            <div class="cardHeader">
+                <h1>SSC Exam Scores</h1>
+                <i class="fa-solid fa-plus"></i>
+            </div>
+            <div class="cardbody">
+                <form class="details-grid">
+                    <div class="detail-item">
+                        <label for="sscSchool" class="key">School/College Name</label>
+                        <input type="text" id="sscSchool" name="sscSchool" class="value" placeholder="Enter school/college name">
+                    </div>
+                    <div class="detail-item">
+                        <label for="sscScore" class="key">Total Final Score</label>
+                        <input type="number" id="sscScore" name="sscScore" class="value" placeholder="Enter total score">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Submitted Document List Section -->
+        <div class="documents card">
+            <div class="cardHeader">
+                <h1>Submitted Document List</h1>
+                <i class="fa-solid fa-plus"></i>
+            </div>
+            <div class="cardbody">
+                <form class="details-grid">
+                    <div class="detail-item">
+                        <input type="checkbox" id="document1" name="documents" value="SSC Marksheet">
+                        <label for="document1">SSC Marksheet</label>
+                    </div>
+                    <div class="detail-item">
+                        <input type="checkbox" id="document2" name="documents" value="HSC Marksheet">
+                        <label for="document2">HSC Marksheet</label>
+                    </div>
+                    <div class="detail-item">
+                        <input type="checkbox" id="document3" name="documents" value="Birth Certificate">
+                        <label for="document3">Birth Certificate</label>
+                    </div>
+                    <div class="detail-item">
+                        <input type="checkbox" id="document4" name="documents" value="Domicile Certificate">
+                        <label for="document4">Domicile Certificate</label>
+                    </div>
+                    <div class="detail-item">
+                        <input type="checkbox" id="document5" name="documents" value="Aadhar Card">
+                        <label for="document5">Aadhar Card</label>
+                    </div>
+                    <div class="detail-item">
+                        <input type="checkbox" id="document6" name="documents" value="Passport">
+                        <label for="document6">Passport</label>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Personal Information Section -->
+        <div class="personal-info card">
+            <div class="cardHeader">
+                <h1>Personal Information</h1>
+                <i class="fa-solid fa-plus"></i>
+            </div>
+            <div class="cardbody">
+                <form class="details-grid">
+                    <div class="detail-item">
+                        <label for="birthPlace" class="key">Birth Place</label>
+                        <input type="text" id="birthPlace" name="birthPlace" class="value" placeholder="Enter birth place">
+                    </div>
+                    <div class="detail-item">
+                        <label for="birthState" class="key">Birth State</label>
+                        <input type="text" id="birthState" name="birthState" class="value" placeholder="Enter birth state">
+                    </div>
+                    <div class="detail-item">
+                        <label for="motherTongue" class="key">Mother Tongue</label>
+                        <input type="text" id="motherTongue" name="motherTongue" class="value" placeholder="Enter mother tongue">
+                    </div>
+                    <div class="detail-item">
+                        <label for="aadharNo" class="key">Aadhar No.</label>
+                        <input type="text" id="aadharNo" name="aadharNo" class="value" placeholder="Enter Aadhar number">
+                    </div>
+                    <div class="detail-item">
+                        <label for="passportNo" class="key">Passport No.</label>
+                        <input type="text" id="passportNo" name="passportNo" class="value" placeholder="Enter passport number">
+                    </div>
+                    <div class="detail-item">
+                        <label for="voterId" class="key">Voter ID</label>
+                        <input type="text" id="voterId" name="voterId" class="value" placeholder="Enter voter ID">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Photo and Sign Section -->
+        <div class="photos card">
+            <div class="cardHeader">
+                <h1>Photo and Sign</h1>
+                <div class="header-actions">
+                  
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+            </div>
+            <div class="cardbody">
+                <div class="details-grid">
+                    <!-- Student Photo -->
+                    <div class="photo-container">
+                        <span class="key">*Student Photo:</span>
+                        <div class="photo-frame">
+                            <img src="https://via.placeholder.com/150x200" alt="Student Photo" class="student-photo" id="photoPreview">
+                            <div class="upload-controls">
+                                <input type="file" id="photoUpload" accept="image/jpeg,image/png,image/jpg" style="display: none;">
+                                <button class="upload-btn" onclick="document.getElementById('photoUpload').click()">
+                                    <i class="fa-solid fa-upload"></i> Choose Photo
+                                </button>
+                            </div>
+                        </div>
+                        <small class="hint">(Passport Size Photo Only & Size Below 100Kb)</small>
+                    </div>
+        
+                    <!-- Student Signature -->
+                    <div class="sign-container">
+                        <span class="key">*Student Sign:</span>
+                        <div class="sign-frame">
+                            <img src="https://via.placeholder.com/150x50" alt="Student Signature" class="student-sign" id="signPreview">
+                            <div class="upload-controls">
+                                <input type="file" id="signUpload" accept="image/jpeg,image/png,image/jpg" style="display: none;">
+                                <button class="upload-btn" onclick="document.getElementById('signUpload').click()">
+                                    <i class="fa-solid fa-upload"></i> Choose Signature
+                                </button>
+                            </div>
+                        </div>
+                        <small class="hint">(Signature Size Below 100Kb)</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        © VJTI MIS Portal. All rights reserved.
+        © Veermata Jijabai Technological Institute (VJTI) 2025
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="courseregis.js"></script>
+</body>
+</html>
