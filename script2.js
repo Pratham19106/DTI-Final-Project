@@ -27,11 +27,13 @@ function verifyOTP(enteredOTP) {
             duration: 0.3,
             backgroundColor: '#4CAF50',
             onComplete: () => {
-                window.location.href = 'pratham/landing.html';
+                // Prevent default form behavior and redirect
+                setTimeout(() => {
+                    window.location.replace('pratham/landing.html');
+                }, 500);
             }
         });
     } else {
-      
         gsap.to('.cont-ls', {
             x: [-10, 10, -10, 10, 0],
             duration: 0.4,
@@ -41,7 +43,6 @@ function verifyOTP(enteredOTP) {
                     backgroundColor: '#ffffff',
                     duration: 0.4
                 });
-                
                 otpInputs.forEach(input => input.value = '');
                 otpInputs[0].focus();
             }
@@ -49,15 +50,22 @@ function verifyOTP(enteredOTP) {
     }
 }
 
-
-otpForm.addEventListener('submit', (e) => {
+// Update form submission handler
+document.querySelector('.otp-form').addEventListener('submit', function(e) {
+    // Prevent the default form submission
     e.preventDefault();
+    
+    // Get OTP value and verify
     const enteredOTP = Array.from(otpInputs)
         .map(input => input.value)
         .join('');
+    
+    // Call verify function
     verifyOTP(enteredOTP);
+    
+    // Return false to ensure form doesn't submit
+    return false;
 });
-
 
 document.getElementById('b002').addEventListener('click', () => {
 
@@ -71,7 +79,6 @@ document.getElementById('b002').addEventListener('click', () => {
         repeat: 1
     });
 });
-
 
 document.getElementById('b001').addEventListener('click', () => {
     window.location.href = 'page1.html';
