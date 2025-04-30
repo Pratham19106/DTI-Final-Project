@@ -546,7 +546,75 @@ i {
     .font {
       font-size: 16px;
     }
+  @media (max-width: 480px) {
+    /* ... existing mobile styles ... */
+    html {
+        height: auto;
+    }
+
+    .logo {
+      width: 50%;
+      height: auto;
+    }
   
+    .navbar-left {
+      margin-bottom: 8px;
+      justify-content: center;
+    }
+  
+    .navbar-right {
+      display: block;
+      margin-right: 2%;
+     
+      gap: 1%;
+    }
+  
+    .navbar-right a {
+  
+      font-size: 1.5rem;
+    }
+    .dropdown-toggle {
+      font-size: 0.9rem;
+    }
+  
+    .dropdown-menu {
+      font-size: 0.85rem;
+    }
+  
+    .fa-home, .fa-user, .fa-graduation-cap {
+      font-size: 1.2rem;
+    }
+  
+  
+  
+  
+    body {
+      position: relative;
+    }
+  
+  
+    .footer {
+      font-size: 0.9rem;
+    }
+  
+    .subMenu {
+      width: 90%;
+      right: 5%;
+      font-size: 1.2rem;
+    }
+  
+    .subMenu img {
+      width: 40%;
+    }
+  
+    body {
+        position: relative;
+    }
+
+    .footer {
+        font-size: 0.89rem;
+    }
+
     .logo {
       height: 50px;
       width: auto;
@@ -595,3 +663,4 @@ i {
     }
   }
   
+  }

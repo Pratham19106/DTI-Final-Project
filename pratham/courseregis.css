@@ -126,6 +126,7 @@ i {
   border-radius: 22px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.3);
+  pointer-events: all;
 }
 
 .menu-upper {
@@ -133,6 +134,7 @@ i {
   flex-direction: column;
   width: 100%;
   padding: 1rem;
+  pointer-events: all;
 }
 
 .menu-lower {
@@ -150,6 +152,7 @@ i {
   gap: 0.5rem;
   transition: all 0.3s ease;
   color: inherit;
+  pointer-events: all;
 }
 
 .menu-upper a {

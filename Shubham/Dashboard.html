@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Dashboard</title>
     <link rel="stylesheet" href="Dashboard.css">
+    <link rel="stylesheet" href="../navbar.css">
     <script src="https://kit.fontawesome.com/657d6f9f7c.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -18,10 +19,25 @@
         </div>
         <div class="navbar-right">
             <a href="#"><i class="fas fa-home"></i> Home</a>
-            <a href="#"><i class="fas fa-user"></i> Profile</a>
-            <a href="#"><i class="fas fa-graduation-cap"></i> Academic</a>
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle">
+                    <i class="fas fa-graduation-cap"></i> Academic
+                    <i class="fa-solid fa-caret-down academic-drop"></i>
+                </a>
+                <div class="dropdown-menu">
+                    <div class="menu-upper">
+                        <a href="../Shubham/Dashboard.html"><i class="fas fa-chart-line"></i> Dashboard</a>
+                        <a href="courseregis.html"><i class="fas fa-book"></i> Course Registration</a>
+                        <a href="../Shubham/Feedback.html"><i class="fas fa-comment"></i> Faculty Feedback</a>
+                    
+                    
+                        <a href="../Shubham/Downloadpage.HTML"><i class="fas fa-download"></i> Downloads</a>
+                  </div>
+                </div>
+            </div>
+            <a href="userProfile.HTML"><i class="fas fa-user"></i> Profile</a>
             <i class="fa-solid fa-caret-down drop"></i>
-        </div>
+    </div>
     </div>
 
     <!-- Submenu -->

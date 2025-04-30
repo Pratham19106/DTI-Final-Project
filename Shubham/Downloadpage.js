@@ -43,7 +43,7 @@ const hover = gsap.to(drop, {
   yPercent: -20,
   opacity: 0,
   paused: true,
-  duration: 0.3,
+  duration: 0.2,
   onStart: loading,
   onReverseComplete: hiding,
 });
@@ -62,25 +62,52 @@ subMenu.addEventListener("mouseleave", () => {
 });
 const dropdown = document.querySelector(".dropdown");
 const dropdownMenu = document.querySelector(".dropdown-menu");
+let isDropdownOpen = false;
 
-dropdown.addEventListener("mouseenter", () => {
-    dropdownMenu.style.display = "flex";
-    gsap.to(dropdownMenu, {
-        opacity: 1,
-        height: "auto",
-        duration: 0.3,
-        ease: "power2.inOut",
-    });
+// Open dropdown on click
+dropdown.addEventListener("click", (e) => {
+    e.preventDefault();
+    
+    if (!isDropdownOpen) {
+        dropdownMenu.style.display = "flex";
+        gsap.to(dropdownMenu, {
+            opacity: 1,
+            height: "auto",
+            duration: 0.3,
+            ease: "power2.inOut",
+        });
+        isDropdownOpen = true;
+    }
 });
 
-dropdown.addEventListener("mouseleave", () => {
-    gsap.to(dropdownMenu, {
-        opacity: 0,
-        height: 0,
-        duration: 0.3,
-        ease: "power2.inOut",
-        onComplete: () => {
-            dropdownMenu.style.display = "none";
-        },
-    });
+// Close dropdown when mouse leaves the menu
+dropdownMenu.addEventListener("mouseleave", () => {
+    if (isDropdownOpen) {
+        gsap.to(dropdownMenu, {
+            opacity: 0,
+            height: 0,
+            duration: 0.3,
+            ease: "power2.inOut",
+            onComplete: () => {
+                dropdownMenu.style.display = "none";
+            },
+        });
+        isDropdownOpen = false;
+    }
+});
+
+// Close dropdown when clicking outside
+document.addEventListener("click", (e) => {
+    if (!dropdown.contains(e.target) && !dropdownMenu.contains(e.target) && isDropdownOpen) {
+        gsap.to(dropdownMenu, {
+            opacity: 0,
+            height: 0,
+            duration: 0.3,
+            ease: "power2.inOut",
+            onComplete: () => {
+                dropdownMenu.style.display = "none";
+            },
+        });
+        isDropdownOpen = false;
+    }
 });
