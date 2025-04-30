@@ -279,8 +279,10 @@ i {
     animation: fadeIn 0.8s ease-in-out, floatUpDown 3s ease-in-out infinite alternate;
     transition: transform 0.3s ease;
     text-align: left;
-    width: 100%;
-    max-width: 800px;
+    /* width: 100%; */
+    /* max-width: 800px; */
+    width: 750px;
+   
   }
   
   .profile-card:hover {
@@ -288,8 +290,8 @@ i {
   }
   
   .profile-img {
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 140px;
     margin-bottom: 20px;
     object-fit: cover;
     border: 4px solid #ff4015;
