@@ -93,28 +93,50 @@ function updateDateTime() {
     }
   });
 
-    // Dropdown functionality
-  const dropdown = document.querySelector(".dropdown");
-  const dropdownMenu = document.querySelector(".dropdown-menu");
-  
-  dropdown.addEventListener("mouseenter", () => {
-      dropdownMenu.style.display = "flex";
-      gsap.to(dropdownMenu, {
-          opacity: 1,
-          height: "auto",
-          duration: 0.3,
-          ease: "power2.inOut",
-      });
-  });
-  
-  dropdown.addEventListener("mouseleave", () => {
-      gsap.to(dropdownMenu, {
-          opacity: 0,
-          height: 0,
-          duration: 0.3,
-          ease: "power2.inOut",
-          onComplete: () => {
-              dropdownMenu.style.display = "none";
-          },
-      });
-  });
+const dropdown = document.querySelector(".dropdown");
+const dropdownMenu = document.querySelector(".dropdown-menu");
+let isDropdownOpen = false;
+
+dropdown.addEventListener("click", (e) => {
+    e.preventDefault();
+    
+    if (!isDropdownOpen) {
+        dropdownMenu.style.display = "flex";
+        gsap.to(dropdownMenu, {
+            opacity: 1,
+            height: "auto",
+            duration: 0.3,
+            ease: "power2.inOut",
+        });
+        isDropdownOpen = true;
+    }
+});
+dropdownMenu.addEventListener("mouseleave", () => {
+    if (isDropdownOpen) {
+        gsap.to(dropdownMenu, {
+            opacity: 0,
+            height: 0,
+            duration: 0.3,
+            ease: "power2.inOut",
+            onComplete: () => {
+                dropdownMenu.style.display = "none";
+            },
+        });
+        isDropdownOpen = false;
+    }
+});
+
+document.addEventListener("click", (e) => {
+    if (!dropdown.contains(e.target) && !dropdownMenu.contains(e.target) && isDropdownOpen) {
+        gsap.to(dropdownMenu, {
+            opacity: 0,
+            height: 0,
+            duration: 0.3,
+            ease: "power2.inOut",
+            onComplete: () => {
+                dropdownMenu.style.display = "none";
+            },
+        });
+        isDropdownOpen = false;
+    }
+});
