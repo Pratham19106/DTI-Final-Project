@@ -97,9 +97,7 @@ function updateDateTime() {
   const dropdownMenu = document.querySelector(".dropdown-menu");
   let isDropdownOpen = false;
   
-  // Open dropdown on click
   dropdown.addEventListener("click", (e) => {
-      // Prevent default only if the target is the dropdown toggle, not the links
       if (e.target.classList.contains("dropdown-toggle") || e.target.closest(".dropdown-toggle")) {
           e.preventDefault();
   
@@ -127,7 +125,6 @@ function updateDateTime() {
       }
   });
   
-  // Close dropdown when mouse leaves the menu
   dropdownMenu.addEventListener("mouseleave", () => {
       if (isDropdownOpen) {
           gsap.to(dropdownMenu, {
@@ -143,7 +140,6 @@ function updateDateTime() {
       }
   });
   
-  // Close dropdown when clicking outside
   document.addEventListener("click", (e) => {
       if (!dropdown.contains(e.target) && !dropdownMenu.contains(e.target) && isDropdownOpen) {
           gsap.to(dropdownMenu, {

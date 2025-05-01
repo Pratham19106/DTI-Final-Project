@@ -22,7 +22,6 @@
             return;
         }
 
-        // Redirect with "+91 " prefix if all is valid
         alert("OTP sent to +91 " + mobile);
         window.location.href = "page2.html";
     }

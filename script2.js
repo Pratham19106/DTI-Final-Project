@@ -27,7 +27,6 @@ function verifyOTP(enteredOTP) {
             duration: 0.3,
             backgroundColor: '#4CAF50',
             onComplete: () => {
-                // Prevent default form behavior and redirect
                 setTimeout(() => {
                     window.location.replace('pratham/landing.html');
                 }, 500);
@@ -50,20 +49,15 @@ function verifyOTP(enteredOTP) {
     }
 }
 
-// Update form submission handler
 document.querySelector('.otp-form').addEventListener('submit', function(e) {
-    // Prevent the default form submission
     e.preventDefault();
     
-    // Get OTP value and verify
     const enteredOTP = Array.from(otpInputs)
         .map(input => input.value)
         .join('');
     
-    // Call verify function
     verifyOTP(enteredOTP);
     
-    // Return false to ensure form doesn't submit
     return false;
 });
 
