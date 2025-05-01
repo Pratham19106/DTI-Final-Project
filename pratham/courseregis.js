@@ -128,24 +128,38 @@ document.getElementById('signUpload').addEventListener('change', function (e) {
     reader.readAsDataURL(file);
   }
 });
-// Replace the existing dropdown event listeners with this code
+
 const dropdown = document.querySelector(".dropdown");
 const dropdownMenu = document.querySelector(".dropdown-menu");
 let isDropdownOpen = false;
 
 // Open dropdown on click
 dropdown.addEventListener("click", (e) => {
-    e.preventDefault();
-    
-    if (!isDropdownOpen) {
-        dropdownMenu.style.display = "flex";
-        gsap.to(dropdownMenu, {
-            opacity: 1,
-            height: "auto",
-            duration: 0.3,
-            ease: "power2.inOut",
-        });
-        isDropdownOpen = true;
+    // Prevent default only if the target is the dropdown toggle, not the links
+    if (e.target.classList.contains("dropdown-toggle") || e.target.closest(".dropdown-toggle")) {
+        e.preventDefault();
+
+        if (!isDropdownOpen) {
+            dropdownMenu.style.display = "flex";
+            gsap.to(dropdownMenu, {
+                opacity: 1,
+                height: "auto",
+                duration: 0.3,
+                ease: "power2.inOut",
+            });
+            isDropdownOpen = true;
+        } else {
+            gsap.to(dropdownMenu, {
+                opacity: 0,
+                height: 0,
+                duration: 0.3,
+                ease: "power2.inOut",
+                onComplete: () => {
+                    dropdownMenu.style.display = "none";
+                },
+            });
+            isDropdownOpen = false;
+        }
     }
 });
 
