@@ -166,8 +166,7 @@
     }
 
     .navbar-right {
-        overflow-x:scroll;
-        wrap:nowrap
+        
         display: block;
         margin-right: 2%;
         gap: 1%;
