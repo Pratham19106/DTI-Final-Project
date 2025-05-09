@@ -1,5 +1,5 @@
 :root {
-    --primary-color: #e64a19;    /* Dashboard Content Styles */
+    --primary-color: #e64a19;   
     .dashboard-content {
         padding: 2rem;
         display: flex;
@@ -101,7 +101,6 @@ body {
 
 
 
-/* Submenu Styles */
 .subMenu {
     top: 8%;
     right: 2%;
@@ -136,7 +135,6 @@ body {
     border-bottom-right-radius: inherit;
 }
 
-/* Profile Card Styles */
 .profile-card {
     position: relative;
     display: flex;
@@ -201,7 +199,6 @@ body {
     background-color: #d84315;
   }
   
-  /* Button Styles */
   .btn {
     height: 30%;
     width: 75%;
@@ -231,7 +228,6 @@ body {
     background-color: #a23312;
   }
   
-/* Dashboard Card Styles */
 .content {
     width: 80%;
     margin: 20px auto;
@@ -334,7 +330,6 @@ body {
 
 
 
-/* Update footer styles */
 .footer {
     margin-top: auto;
     width: 100%;
@@ -345,7 +340,6 @@ body {
     box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Add responsive footer text */
 @media (max-width: 768px) {
     .footer {
         font-size: 0.9rem;
@@ -358,7 +352,6 @@ body {
     width: 100%;
 }
 
-/* Footer Styles */
 .footer {
     display: flex;
     align-items: center;
@@ -369,7 +362,6 @@ body {
     color: #eee;
 }
 
-/* Media Queries */
 @media (max-width: 768px) {
     .content { width: 95%; }
     .navbar-right { gap: 0.8rem; }

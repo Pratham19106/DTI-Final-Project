@@ -1,4 +1,3 @@
-/* Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -23,7 +22,6 @@ body {
     color: #333;
 }
 
-/* Icon Styles */
 i {
     font-weight: 900;
     font-size: 2rem;
@@ -35,7 +33,6 @@ i {
     margin-left: 5%;
 }
 
-/* Navbar Styles */
 .navbar {
     width: 100%;
     background-color: #e64a19;
@@ -173,7 +170,6 @@ i {
   transform: translateX(10px);
 }
 
-/* SubMenu Styles */
 .subMenu {
     overflow: hidden;
     top: 8%;
@@ -218,7 +214,6 @@ i {
     background-color: #d84315;
 }
 
-/* Button Styles */
 .btn {
     height: 30%;
     width: 75%;
@@ -256,14 +251,12 @@ i {
     padding: 5px;
 }
 
-/* Content Area Styles */
 .content {
     width: 80%;
     position: relative;
     margin-top: 20px;
 }
 
-/* Card Styles */
 .card {
     margin-top: 5%;
     margin-bottom: 5%;
@@ -298,7 +291,6 @@ i {
     height: 0px;
 }
 
-/* Form Grid Styles */
 .details-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -336,7 +328,6 @@ textarea.value {
     color: #e64a19;
 }
 
-/* Photo and Sign Section */
 .photos .details-grid {
     display: flex;
     flex-direction: column;
@@ -404,7 +395,6 @@ textarea.value {
     text-align: center;
 }
 
-/* Footer Styles */
 .footer {
     display: flex;
     align-items: center;
@@ -416,9 +406,7 @@ textarea.value {
     color: #eee;
 }
 
-/* Media Queries */
 @media (max-width: 768px) {
-    /* ... existing tablet styles ... */
     .photo-frame,
     .sign-frame {
         width: 120px;
@@ -514,7 +502,6 @@ textarea.value {
 }
 
 @media (max-width: 480px) {
-    /* ... existing mobile styles ... */
     html {
         height: auto;
     }
@@ -610,4 +597,4 @@ textarea.value {
     .value {
         font-size: 0.89rem;
     }
-}
+    }

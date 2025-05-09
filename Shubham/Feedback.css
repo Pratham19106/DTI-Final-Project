@@ -306,7 +306,6 @@ i {
 .profile-info{
     text-align: center;
 }
-/* Layout Components */
 .teacher-section{
     display: flex;
     justify-content: center;
@@ -334,7 +333,6 @@ i {
     transform: translateY(-5px);
 }
 
-/* Header and Content Styles */
 .cardHeader {
     background-color: var(--primary-color);
     color: var(--white);
@@ -472,7 +470,6 @@ i {
     padding: 2rem;
 }
 
-/* Form Elements */
 .form-group {
     margin-bottom: 1.5rem;
 }
@@ -484,7 +481,6 @@ i {
     color: var(--text-color);
 }
 
-/* Star Rating */
 .star-rating {
     display: flex;
     gap: 12px;
@@ -517,7 +513,6 @@ i {
     line-height: 1.5;
     transition: border-color 0.3s ease;
 }
-/* Buttons */
 .btn {
     background-color: var(--primary-color);
     color: var(--white);
@@ -539,7 +534,6 @@ i {
 
 
 
-/* Messages */
 .message {
     position: fixed;
     top: 20px;
@@ -561,7 +555,6 @@ i {
     background-color: var(--error);
     color: var(--white);
 }
-/* Add these footer styles to your existing CSS */
 
 
 @media (max-width: 768px) {

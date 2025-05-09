@@ -1,4 +1,3 @@
-/* Base Styles */
 * {
   margin: 0;
   padding: 0;
@@ -24,10 +23,9 @@ body {
   color: #333;
 }
 
-/* Icon Styles */
 i {
   font-size: 2rem;
-  font-weight: 900; /* Added to match courseregis.css */
+  font-weight: 900; 
 }
 
 .fa-plus {
@@ -36,7 +34,6 @@ i {
   margin-left: 5%;
 }
 
-/* Navbar Styles */
 .navbar {
   width: 100%;
   background-color: #e64a19;
@@ -45,7 +42,7 @@ i {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 1.5rem; /* Changed from 2rem to match courseregis.css */
+  font-size: 1.5rem; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -58,7 +55,7 @@ i {
 }
 
 .logo {
-  filter: brightness(1.2); /* Added to match courseregis.css */
+  filter: brightness(1.2); 
   width: 45%;
   color: white;
   filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.4));
@@ -68,7 +65,7 @@ i {
 .logo:hover {
   transform: scale(1.05);
   color: #fff;
-  filter: none; /* Removed invert filter to match courseregis.css */
+  filter: none; 
 }
 
 .navbar-right {
@@ -172,7 +169,6 @@ i {
   transform: translateX(10px);
 }
 
-/* SubMenu Styles */
 .subMenu {
   overflow: hidden;
   top: 8%;
@@ -216,8 +212,6 @@ i {
   border-bottom-right-radius: inherit;
   background-color: #d84315;
 }
-
-/* Button Styles */
 .btn {
   height: 30%;
   width: 75%;
@@ -276,7 +270,6 @@ i {
   background: #d84315;
 }
 
-/* Content & Card Styles */
 .content {
   width: 80%;
   position: relative;
@@ -315,7 +308,6 @@ i {
   align-items: center;
 }
 
-/* Grid & Detail Styles */
 .details-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -371,7 +363,6 @@ i {
   background-color: rgba(230, 74, 25, 0.1);
 }
 
-/* Parent Details Styles */
 .parents {
   margin-top: 5%;
 }
@@ -392,7 +383,6 @@ i {
   font-size: 1.2rem;
 }
 
-/* Photo & Sign Section */
 .photos .details-grid {
   display: flex;
   flex-direction: column;
@@ -459,7 +449,6 @@ i {
   margin-top: 10px;
 }
 
-/* Footer Styles */
 .footer {
   display: flex;
   align-items: center;
@@ -471,7 +460,6 @@ i {
   color: #eee;
 }
 
-/* Media Queries */
 @media (max-width: 768px) {
   .photo-frame,
   .sign-frame {

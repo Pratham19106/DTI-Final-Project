@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const starGroups = document.querySelectorAll('.star-rating');
     const form = document.getElementById('feedbackForm');
 
-    // Star rating functionality
+  
     function handleStarRating(stars, input) {
         stars.forEach((star, index) => {
             star.addEventListener('click', () => {
@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 input.value = isStarFilled ? 0 : index + 1;
             });
 
-            // Hover effects
+          
             star.addEventListener('mouseenter', () => handleStarHover(star, true));
             star.addEventListener('mouseleave', () => handleStarHover(star, false));
         });
@@ -184,20 +184,20 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Initialize star ratings
+  
     starGroups.forEach(group => {
         const stars = group.querySelectorAll('i');
         const input = group.querySelector('input[type="hidden"]');
         handleStarRating(stars, input);
     });
 
-    // Form submission
+ 
     form.addEventListener('submit', handleFormSubmit);
 
     function handleFormSubmit(e) {
         e.preventDefault();
 
-        // Validate form
+        
         const ratings = [...form.querySelectorAll('input[type="hidden"]')]
             .map(input => parseInt(input.value));
 
